@@ -1,7 +1,7 @@
 [package]
 name = "snake"
-version = "0.1.0"
-authors = ["tensor-programming <abeltensor@tensor-programming.com>"]
+version = "0.0.1"
+authors = ["tensor-programming <abeltensor@tensor-programming.com>","sidharth.k9 <sidharth.k9@mailbox.org>"]
 
 [dependencies]
 rand = "0.7"
