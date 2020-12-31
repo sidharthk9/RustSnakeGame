@@ -24,7 +24,7 @@ pub struct Game {
 impl Game {
     pub fn new(width: i32, height: i32) -> Game {
         Game {
-            snake: Snake::new(2, 2),
+            snake: Snake::new_snake(2, 2),
             waiting_time: 0.0,
             food_exists: true,
             food_x: 6,
@@ -51,7 +51,7 @@ impl Game {
     }
 
     pub fn draw(&self, con: &Context, g: &mut G2d) {
-        self.snake.draw(con, g);
+        self.snake.draw_body(con, g);
 
         if self.food_exists {
             draw_block(FOOD_COLOR, self.food_x, self.food_y, con, g);
@@ -121,7 +121,7 @@ impl Game {
     }
 
     fn restart(&mut self) {
-        self.snake = Snake::new(2, 2);
+        self.snake = Snake::new_snake(2, 2);
         self.waiting_time = 0.0;
         self.food_exists = true;
         self.food_x = 6;

@@ -17,7 +17,6 @@ pub fn draw_block(color: Color, x: i32, y: i32, context: &Context, gfx: &mut G2d
     let gui_x = coordinate_conversion(x, BLOCK_SIZE);
     let gui_y = coordinate_conversion(y, BLOCK_SIZE);
 
-
     rectangle(color, [gui_x, gui_y, BLOCK_SIZE, BLOCK_SIZE], context.transform, gfx);
 }
 
